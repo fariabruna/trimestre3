@@ -24,6 +24,22 @@ public class UI{
 
     }
 
+    [Serializable]
+
+    public class GameOver{
+
+        [Header("Text")]
+
+        public Text txtcoinCount;
+        public Text txtTimer;
+
+        [Header("Other")]
+
+        public GameObject gameOverPanel;
+
+    }
+
     public HUD hud;
+    public GameOver gameOver;
 
 }
