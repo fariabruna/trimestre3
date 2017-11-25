@@ -39,7 +39,24 @@ public class UI{
 
     }
 
+    [Serializable]
+
+    public class LevelComplete{
+
+        [Header("Text")]
+
+        public Text txtcoinCount;
+        public Text txtTimer;
+
+        [Header("Other")]
+
+        public GameObject LevelCompletePanel;
+
+    }
+
     public HUD hud;
     public GameOver gameOver;
+
+    public LevelComplete levelComplete;
 
 }
