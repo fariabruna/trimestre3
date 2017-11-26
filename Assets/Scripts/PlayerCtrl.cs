@@ -51,8 +51,7 @@ public class PlayerCtrl : MonoBehaviour {
         Gizmos.DrawWireCube(feet.position, new Vector3(feetWidth, feetHeight, 0f));
 
     }
-    
-    // Update is called once per frame
+
     void Update () {
         
         if (transform.position.y < GM.instance.yMinLive){
@@ -130,6 +129,10 @@ public class PlayerCtrl : MonoBehaviour {
     void OnCollisionEnter2D(Collision2D other){
         if(other.gameObject.layer == LayerMask.NameToLayer("Ground")){
             isJumping = false;
+        }
+        else if (other.gameObject.layer == LayerMask.NameToLayer("Enemy")) {
+            anim.SetInteger("State", 5);
+            GM.instance.HurtPlayer();
         }
     }
     void OnTriggerEnter2D(Collider2D other){
