@@ -7,7 +7,7 @@ public class MonsterPatrolCtrl : MonoBehaviour{
     public Transform pos1, pos2;
 
     public float speed = 2f;
-    public float waitTime = 3f;
+    public float waitTime = 1f;
     Vector3 nextPos;
     Animator anim;
     SpriteRenderer sr;

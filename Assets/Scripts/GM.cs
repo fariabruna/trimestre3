@@ -18,7 +18,7 @@ public class GM : MonoBehaviour {
 
     public GameObject playerPrefab;
 
-    public float maxTime = 120f;
+    public float maxTime = 40f;
     bool timerOn = true;
     float timeLeft;
 
@@ -79,7 +79,7 @@ public class GM : MonoBehaviour {
     void DisplayHudData(){
         ui.hud.txtcoinCount.text = "x " + data.coinCount;
         ui.hud.txtLifeCount.text = "x " + data.lifeCount;
-        ui.hud.txtTimer.text = "Timer: " + timeLeft.ToString("F1");
+        ui.hud.txtTimer.text = "Timer: " + timeLeft.ToString("F0");
     }
 
     public void IncrementCoinCount(){
